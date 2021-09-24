@@ -1,0 +1,72 @@
+package hrmanagerfront.model;
+
+public class Employee {
+
+	/* Properties of the Employee class */
+
+	private int empCode;
+	private String empName;
+	private String empLocation;
+	private String empEmail;
+	private String empDob;
+
+	public Employee() {
+		super();
+	}
+
+	public Employee(int empCode, String empName, String empLocation, String empEmail, String empDob) {
+		super();
+		this.empCode = empCode;
+		this.empName = empName;
+		this.empLocation = empLocation;
+		this.empEmail = empEmail;
+		this.empDob = empDob;
+	}
+
+	public int getEmpCode() {
+		return empCode;
+	}
+
+	public void setEmpCode(int empCode) {
+		this.empCode = empCode;
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+	public String getEmpLocation() {
+		return empLocation;
+	}
+
+	public void setEmpLocation(String empLocation) {
+		this.empLocation = empLocation;
+	}
+
+	public String getEmpEmail() {
+		return empEmail;
+	}
+
+	public void setEmpEmail(String empEmail) {
+		this.empEmail = empEmail;
+	}
+
+	public String getEmpDob() {
+		return empDob;
+	}
+
+	public void setEmpDob(String empDob) {
+		this.empDob = empDob;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empCode=" + empCode + ", empName=" + empName + ", empLocation=" + empLocation + ", empEmail="
+				+ empEmail + ", empDob=" + empDob + "]";
+	}
+
+}

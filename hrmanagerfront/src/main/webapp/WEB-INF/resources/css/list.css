@@ -1,0 +1,110 @@
+@charset "ISO-8859-1";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css");
+
+.container1 {
+	width: 80%;
+	margin: 0 auto; /* Center the DIV horizontally */
+}
+
+.fixed-header, .fixed-footer {
+	width: 100%;
+	position: fixed;
+	/* background: #B589D6; */
+	background: #d4bdf9;
+	padding: 10px 0;
+	color: #fff;
+}
+
+.fixed-header {
+	top: 0;
+}
+
+.fixed-footer {
+	bottom: 0;
+}
+/* Some more styles to beutify this example */
+nav {
+	color: #fff;
+	text-decoration: none;
+	padding: 7px 25px;
+	display: flex;
+}
+
+.container1 p {
+	line-height: 200px; /* Create scrollbar to test positioning */
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: whitesmoke;
+}
+
+.wrapper {
+    border: 1px solid gray;
+    margin-top:10%;
+}
+
+.heading{
+  margin-top: -1%;
+  color:#87CEEB;
+  font-weight: bolder;
+  padding-left: 2%;	
+}
+
+.main_list{
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-bottom: 5%;
+}
+
+
+.upbtns{
+	display:flex;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+.welcome{
+	float:right;
+	padding-right: 5%;
+	display:flex;
+	text-align: center;
+}
+
+.fa-times-circle{
+	color:red;
+	font-size: 160%;
+}
+
+/* The Close Button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+table {
+	border: 1px solid black;
+	width: 100%; 
+}
+
+th {
+	background-color: gainsboro;
+	border: 1px solid black;
+	text-align: center;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 20px;
+}
+
+td {
+	background-color: white;
+	border: 1px solid black;
+	text-align: center;
+}
