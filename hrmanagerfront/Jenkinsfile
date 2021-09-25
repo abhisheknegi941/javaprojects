@@ -8,26 +8,29 @@
 //     sh "${mvnHome}/bin/mvn package"
 //   }
 // }
-pipeline{
+pipeline {
     agent any
-    tools{
-        maven 'maven3'
-    }
-    stages{
-        stage("Create Folder"){
-            steps{
-                sh "mkdir -p ${env.JOB_NAME}"
-            }
-        }
-        stage("Maven Build"){
-            steps{
-                sh 'mvn clean package'
-            }
-        }
-        stage("Deploy to Tomcat Dev"){
-            steps{
-                tomcatDeploy('tomcat-dev','ec2-user','172.31.40.104')
-            }
-        }
-    }
+       stages {
+           stage ('Compile Stage') {
+              steps {
+                withMaven(maven : 'maven-3') {
+                    bat'mvn clean compile'
+                }
+              }
+           }
+           stage ('Testing Stage') {
+              steps {
+                withMaven(maven : 'maven-3') {
+                    bat'mvn test'
+                }
+              }
+           }
+           stage ('Install Stage') {
+              steps {
+                withMaven(maven : 'maven-3') {
+                    bat'mvn install'
+                }
+              }
+           }
+       }
 }
