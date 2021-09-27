@@ -11,6 +11,9 @@
 
 pipeline{
   agent any
+  
+  stages{
+  
   stage('SCM Checkout'){
     git 'https://github.com/abhisheknegi941/javaprojects'
   }
@@ -19,4 +22,5 @@ pipeline{
     def mvnHome = tool name: 'maven-3', type: 'maven'
     bat "${mvnHome}/bin/mvn package"
   }
+  }  
 }
